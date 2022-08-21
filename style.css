@@ -1,0 +1,59 @@
+*{ box-sizing: border-box }
+body{ margin: 0; padding: 0; background-color: #041C32; position: relative; }
+body::-webkit-scrollbar{ display: none; } 
+
+
+h1{ text-align: center; margin-bottom: 0; color: #ECB365 }
+body p{ text-align: center; margin: 0; color: #8f9091 }
+
+.gameContainer{
+    width: fit-content;
+    margin: 80px auto;
+}
+.gameGrid{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.square{
+    width:150px;
+    height: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-middle{ border-top: 10px solid #064663; border-bottom: 10px solid #064663}
+.square-right{ border-left: 10px solid #064663 }
+.square-left{ border-right: 10px solid #064663 }
+
+/*--------------- ICONS ---------------------*/
+
+.xIcon{ width: 100%; height: 100%; position: relative; pointer-events: none; }
+.xIcon .x1, .xIcon .x2{ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 80%;
+    width: 10%;
+    background-color: #ECB365;
+}
+.xIcon .x1{ transform: translate(-50%,-50%) rotate(45deg) }
+.xIcon .x2{ transform: translate(-50%,-50%) rotate(-45deg) }
+
+.circleIcon{
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: 18px solid #ECB365;
+    pointer-events: none;
+}
+
+.iconOpacity{ opacity: 0.4 }
+.select{ cursor: auto; }
+
+/*--------------- MEDIA QUERIES ---------------------*/
+
