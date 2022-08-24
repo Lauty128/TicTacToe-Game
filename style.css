@@ -22,15 +22,18 @@ body p{ text-align: center; margin: 0; color: #8f9091 }
 
 .gameContainer{ width: fit-content; margin: 50px auto }
 .gameGrid{
-    width:100%;
+    width:400px;
+    height: 450px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    justify-items: stretch;
+    align-items:stretch;
 }
 .square{
-    width:130px;
-    height: 130px;
+    /* width:130px;
+    height: 150px;  */
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -48,23 +51,32 @@ body p{ text-align: center; margin: 0; color: #8f9091 }
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 80%;
-    width: 10%;
+    height: 70%;
+    width: 20%;
     background-color: #ECB365;
 }
 .xIcon .x1{ transform: translate(-50%,-50%) rotate(45deg) }
 .xIcon .x2{ transform: translate(-50%,-50%) rotate(-45deg) }
 
 .circleIcon{
-    width: 70%;
-    height: 70%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 18px solid #ECB365;
+    border: 20px solid #ECB365;
     pointer-events: none;
 }
 
 .iconOpacity{ opacity: 0.4 }
 .select{ cursor: auto }
+
+.winningSquare{
+   animation: infinite animateIcon 1.6s linear;
+}
+@keyframes animateIcon{
+    30%{ transform: rotate(90deg) }
+    60%{ transform: rotate(90deg) scale(1.2) }
+    100%{ transform: rotate(90deg) scale(1) }
+}
 
 /*--------------- MEDIA QUERIES ---------------------*/
 
