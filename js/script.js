@@ -20,7 +20,6 @@ gameGrid.addEventListener("mouseover",e=>{
                 actionsGame.printSelection(e.target)
                 actionsGame.movesAmount += 1
                 if(actionsGame.movesAmount >= 5 && actionsGame.play()){
-                    console.log("GANO: ", actionsGame.currentUser)
                     actionsGame.modifyWinningMove()
                     actionsGame.blockGame = true
                 }

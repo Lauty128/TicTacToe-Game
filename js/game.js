@@ -24,7 +24,6 @@ class game {
         this.circleUser= "circleIcon";
         this.currentUser = this.xUser;
         this.movesAmount=0
-        this.winningUser="empate"
         this.winningMove;
         this.blockGame= false;
     }
@@ -73,7 +72,6 @@ class game {
         }
         this.currentUser = this.xUser;
         this.movesAmount = 0
-        this.winningUser = "empate"
         this.blockGame =false
     }
     

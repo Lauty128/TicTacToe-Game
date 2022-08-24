@@ -20,7 +20,7 @@ body p{ text-align: center; margin: 0; color: #8f9091 }
     transition: background-color linear .2s;
 }.restartGame button:hover{ background-color: #cf9b52; }
 
-.gameContainer{ width: fit-content; margin: 50px auto }
+.gameContainer{ width: fit-content; margin: 50px auto; position: relative; }
 .gameGrid{
     width:400px;
     height: 450px;
@@ -32,8 +32,6 @@ body p{ text-align: center; margin: 0; color: #8f9091 }
     align-items:stretch;
 }
 .square{
-    /* width:130px;
-    height: 150px;  */
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -68,15 +66,16 @@ body p{ text-align: center; margin: 0; color: #8f9091 }
 
 .iconOpacity{ opacity: 0.4 }
 .select{ cursor: auto }
+.winningSquare{ animation: infinite animateIcon 1.5s ease-in-out }
 
-.winningSquare{
-   animation: infinite animateIcon 1.6s linear;
-}
+
+/*-------------- ANIMATIONS -------------------------*/
+
+
 @keyframes animateIcon{
     30%{ transform: rotate(90deg) }
-    60%{ transform: rotate(90deg) scale(1.2) }
-    100%{ transform: rotate(90deg) scale(1) }
+    60%{ transform: rotate(90deg) scale(1.2)  }
+    100%{ transform: rotate(90deg) }
 }
 
-/*--------------- MEDIA QUERIES ---------------------*/
 
